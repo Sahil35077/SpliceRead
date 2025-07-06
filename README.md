@@ -3,18 +3,7 @@
 A deep learning framework for canonical and non-canonical splice site classification with synthetic data augmentation and SHAP-based interpretability.
 
 [See SpliceRead Wiki for Full Documentation on Installation and Usage](https://github.com/Sahil35077/SpliceRead/wiki)
-<!--
-**Authors:**
 
-* Khushali Samderiya
-* Rohit Menon
-* Sahil Thapa
-* Prof. Oluwatosin Oluwadare
-
-___________________
-#### OluwadareLab, University of Colorado, Colorado Springs
-___________________
--->
 
 ## Overview
 
@@ -250,21 +239,7 @@ python3 scripts/interpretation/run_shap_logo.py \
   * SHAP Sequence Logos
 
 ---
-<!--
-## Citation
 
-If you use SpliceREAD in your research, please cite our repository:
-
-**Zenodo DOI**: [https://doi.org/10.5281/zenodo.15538290](https://doi.org/10.5281/zenodo.15538290)
-
----
-
-## Contact
-
-For questions, please contact [Khushali Samderiya](mailto:ksamderi@uccs.edu) or [Prof. Oluwatosin Oluwadare](mailto:ooluwada@uccs.edu)
-
----
--->
 ## License
 
 MIT License. See `LICENSE` file for details.
