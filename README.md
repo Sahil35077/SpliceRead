@@ -6,6 +6,7 @@ A deep learning framework for canonical and non-canonical splice site classifica
 
 
 ## Overview
+![Figure1](https://github.com/user-attachments/assets/d46055ef-ed8b-46d5-bf2d-9a13c803076d)
 
 **SpliceREAD** is a deep learning model for accurate splice site classification, especially focused on improving the detection of non-canonical splice sites. Traditional models often overlook these rare variants due to extreme class imbalance and sequence variability. SpliceREAD addresses this gap by combining residual convolutional neural networks with synthetic data augmentation using ADASYN, enabling improved learning of subtle genomic signals. The framework is robust across multiple species, sequence lengths, and validation settings, consistently outperforming existing tools in both canonical and non-canonical detection tasks.
 
