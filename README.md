@@ -9,7 +9,7 @@ A deep learning framework for canonical and non-canonical splice site classifica
 ![image](https://github.com/user-attachments/assets/a0d44420-8b55-440e-9457-1ae649c20335)
 
 
-**SpliceREAD** is a deep learning model for accurate splice site classification, especially focused on improving the detection of non-canonical splice sites. Traditional models often overlook these rare variants due to extreme class imbalance and sequence variability. SpliceREAD addresses this gap by combining residual convolutional neural networks with synthetic data augmentation using ADASYN, enabling improved learning of subtle genomic signals. The framework is robust across multiple species, sequence lengths, and validation settings, consistently outperforming existing tools in both canonical and non-canonical detection tasks.
+**SpliceREAD** is a deep learning model designed for accurate splice site classification, with a particular focus on enhancing the detection of non-canonical splice sites. Traditional models often overlook these rare variants due to extreme class imbalance and sequence variability. SpliceREAD addresses this gap by combining residual convolutional neural networks with synthetic data augmentation using ADASYN, enabling improved learning of subtle genomic signals. The framework is robust across multiple species, sequence lengths, and validation settings, consistently outperforming existing tools in both canonical and non-canonical detection tasks.
 
 ---
 
@@ -17,8 +17,8 @@ A deep learning framework for canonical and non-canonical splice site classifica
 
 ```
 SpliceRead/
-+-- data/                 # Placeholder folder to be replaced with downloaded dataset
-+-- models/               # Placeholder folder to be replaced with pretrained models
++-- data/                 # Placeholder folder to be replaced with the downloaded dataset
++-- models/               # Placeholder folder to be replaced with pre-trained models
 +-- output/               # Stores generated synthetic sequences and visualization outputs
 +-- scripts/              # All training, generation, evaluation, and visualization scripts
 ¦   +-- training/         # Classifier training logic
@@ -53,7 +53,7 @@ Download the Zenodo archive from the link below:
 * Replace the `data/` folder in the repo with the extracted `data/` folder.
 * Replace the `models/` folder in the repo with the extracted `models/` folder.
 
-### Step 4: Build Docker Image
+### Step 4: Build a Docker Image
 
 ```bash
 docker build -t spliceread .
@@ -77,9 +77,9 @@ cd /workspace/SpliceRead
 
 ## Execution Instructions
 
-### 1.Train & Evaluate
+### 1. Train & Evaluate
 
-**Purpose**: Trains and evaluate the SpliceREAD model using 5-fold cross-validation.
+**Purpose**: Train and evaluate the SpliceREAD model using 5-fold cross-validation.
 
 **Arguments**:
 
@@ -143,7 +143,7 @@ python3 scripts/evaluation/run_evaluation.py \
 ### 2.`Visualization`
 **Purpose**: Visualizes GC/AT nucleotide content using scatter plots.
 
-To visualize GC/AT nucleotide content, first we have to generate synthetic sequences using ADASYN. Synthetic data is already provided in zenodo archive you can use that as well.
+To visualize the GC/AT nucleotide content, we first need to generate synthetic sequences using ADASYN. Synthetic data is already provided in the Zenodo archive; you can use that as well.
 
 #### 2.1. `run_generator.py`
 
@@ -172,7 +172,7 @@ python3 scripts/data_augmentation/run_generator.py \
   --acc_nc ./to_zenodo/data_400bp/train/POS/ACC/NC \
   --don_nc ./to_zenodo/data_400bp/train/POS/DON/CAN \
   --don_nc ./to_zenodo/data_400bp/train/POS/DON/NC \
-  --out_acc ./to_zenodo/data_400bp/train/POS/ACC/ADASYN/ADASYN_100 \ # make sure that ADASYN, CAN, NC are in same folder or place
+  --out_acc ./to_zenodo/data_400bp/train/POS/ACC/ADASYN/ADASYN_100 \ # make sure that ADASYN, CAN, NC are in the same folder or place
   --out_don ./to_zenodo/data_400bp/train/POS/DON/ADASYN/ADASYN_100 
 ```
 
